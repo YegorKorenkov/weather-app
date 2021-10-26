@@ -1,0 +1,96 @@
+.main-weather {
+  color: white;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      white-space: nowrap;
+    }
+
+    :last-child {
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    .last-update {
+      opacity: 0.8;
+    }
+  }
+
+  &__container {
+    @include dflex;
+    margin-top: 30px;
+  }
+
+  &__temp {
+    @include dflex;
+
+    img {
+      height: 120px;
+    }
+
+    span {
+      font-size: 96px;
+    }
+  }
+
+  &__description {
+    margin-left: 40px;
+
+    p {
+      line-height: 24px;
+      font-size: 18px;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+
+    :first-child {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 400;
+      opacity: 1;
+    }
+  }
+
+  &__details {
+    @include dflex;
+    margin-top: 30px;
+
+    &-item {
+      @include dflex;
+      padding-right: 40px;
+
+      span {
+        margin-right: 8px;
+        svg {
+          fill: white;
+          opacity: 0.6;
+        }
+      }
+
+      div {
+        p {
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 400;
+        }
+
+        p:first-child {
+          font-size: 13px;
+          text-transform: uppercase;
+          opacity: 0.8;
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
